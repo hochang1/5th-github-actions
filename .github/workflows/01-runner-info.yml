@@ -1,16 +1,16 @@
 name: Welcome Team Member
-run-name: "새 팀원 환영 - ${{ github.actor }}"   # 추가
+run-name: "새 팀원 환영 - 실행자: {github.actor 표현식 사용}"   # 추가
 on:
   workflow_dispatch
 
 jobs:
-  hello:
+  welcome:
     runs-on: ubuntu-latest
     steps:
-      - name: 인사 출력
+      - name: 환영 인사 시작
         run: echo "Hello, GitHub Actions!"
 
-      - name: 정보
+      - name: 프로젝트 정보 안내
         run: |
           echo "오늘은 당신의 첫 출근일입니다"
           echo "프로젝트: GitHub Actions 학습"
