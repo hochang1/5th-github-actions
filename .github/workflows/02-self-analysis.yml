@@ -1,0 +1,9 @@
+name: Repository Self-Analysis
+on: workflow_dispatch
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: 체크아웃 전 워크페이스 확인
+        run: 
