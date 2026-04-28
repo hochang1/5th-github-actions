@@ -1,3 +1,5 @@
+# .github/workflows/06-caller-hello.yml
+
 name: 06. Reusable Hello 호출
 on:
   workflow_dispatch
