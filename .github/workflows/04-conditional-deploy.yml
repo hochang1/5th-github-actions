@@ -20,7 +20,8 @@ jobs:
       target_input: ${{ inputs.target }}
     steps:
       - name: 타겟 확인
-        run: echo "선택된 타겟: ${{ inputs.target }}"
+        run: |
+          echo "선택된 타겟: ${{ inputs.target }}"
 
   deploy-staging:
     runs-on: ubuntu-latest
@@ -28,7 +29,8 @@ jobs:
     if: inputs.target == 'staging' || inputs.target == 'both'
     steps:
       - name: 스테이징 배포
-        run: echo "스테이징 배포: ${{ needs.prepare.outputs.target_input }}"
+        run: |
+          echo "스테이징 배포: ${{ needs.prepare.outputs.target_input }}"
 
   deploy-production:
     runs-on: ubuntu-latest
@@ -36,7 +38,8 @@ jobs:
     if: inputs.target == 'production' || inputs.target == 'both'
     steps:
       - name: 프로덕션 배포
-        run: echo "프로덕션 배포: ${{ needs.prepare.outputs.target_input }}"
+        run: |
+          echo "프로덕션 배포: ${{ needs.prepare.outputs.target_input }}"
 
   production-verify:
     runs-on: ubuntu-latest
