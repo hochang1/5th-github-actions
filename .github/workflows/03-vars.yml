@@ -17,6 +17,6 @@ jobs:
     steps:
       - name: vars 출력
         run: |
-          echo "URL: ${{ vars.APP_NAME }}"
+          echo "URL: ${{ vars.APP_URL }}"
 
 
