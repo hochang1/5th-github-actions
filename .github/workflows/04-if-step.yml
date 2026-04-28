@@ -35,6 +35,6 @@ jobs:
       - name: 강제 실패
         run: exit 1
 
-      - name: 실패해도 항상 실행?
+      - name: 실패해도 항상 실행
         if: ${{ always() }}
-        run: echo "이 Step은 위 Step이 실패해도 실행됨?"
+        run: echo "이 Step은 위 Step이 실패해도 실행됨"
